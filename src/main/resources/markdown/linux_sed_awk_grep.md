@@ -10,22 +10,22 @@
 ####3. 常用参数
 1. > v 显示不被pattern匹配到的行
     ----
-    ![grep](image/linux_shell_grep_1.jpg)
+    ![grep](image/linux/linux_shell_grep_1.jpg)
 2. > i 忽略字符大小写
     ----
-    ![grep](image/linux_shell_grep_2.jpg)
+    ![grep](image/linux/linux_shell_grep_2.jpg)
 3. > c 统计匹配的行数
     ----
-    ![grep](image/linux_shell_grep_3.jpg)
+    ![grep](image/linux/linux_shell_grep_3.jpg)
 4. > e 实现多个选项间的逻辑or关系
     ----
-    ![grep](image/linux_shell_grep_4.jpg)
+    ![grep](image/linux/linux_shell_grep_4.jpg)
 5. > w 匹配整个单词
     ----
-    ![grep](image/linux_shell_grep_5.jpg)
+    ![grep](image/linux/linux_shell_grep_5.jpg)
 6. > E 使用正则匹配
     ----
-    ![grep](image/linux_shell_grep_6.jpg)
+    ![grep](image/linux/linux_shell_grep_6.jpg)
 ## sed
 
 ####1. 定义 
@@ -37,18 +37,18 @@
 #####参数
 1. > -n ：只打印模式匹配的行
     ----
-    ![sed](image/linux_shell_sed_1.jpg)    
+    ![sed](image/linux/linux_shell_sed_1.jpg)    
 2. > -e ：直接在命令行模式上进行sed动作编辑，此为默认选项
     ----
-    ![sed](image/linux_shell_sed_2.jpg)
+    ![sed](image/linux/linux_shell_sed_2.jpg)
 3. > -f ：将sed的动作写在一个文件内，用–f filename 执行filename内的sed动作
     
 4. > -r ：支持扩展表达式
     ----
-    ![sed](image/linux_shell_sed_3.jpg)
+    ![sed](image/linux/linux_shell_sed_3.jpg)
 5. > -i ：直接修改文件内容
     ----
-    ![sed](image/linux_shell_sed_4.jpg)
+    ![sed](image/linux/linux_shell_sed_4.jpg)
 #####action
 1. > 新增， a 的后面可以接字串，而这些字串会在新的一行出现(目前的下一行)
 2. > 取代， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行！
@@ -58,10 +58,10 @@
 6. > 取代， s/// 可以直接进行取代的工作
 7. > 行号,  = 为模式空间中的行打印行号
     ---
-    ![sed](image/linux_shell_sed_5.jpg)
+    ![sed](image/linux/linux_shell_sed_5.jpg)
 8. > 取反,  ! 模式空间中匹配行取反处理
     ---
-    ![sed](image/linux_shell_sed_5.jpg)
+    ![sed](image/linux/linux_shell_sed_5.jpg)
     ---
     > sed之G、H、g、h 使用
      <https://www.cnblogs.com/fhefh/archive/2011/11/22/2259097.html>
@@ -73,10 +73,10 @@
 ####3. 常用参数
 1. > -F 指定输入文件折分隔符，fs是一个字符串或者是一个正则表达式，如-F:
         ---
-        ![awk](image/linux_shell_awk_1.jpg)
+        ![awk](image/linux/linux_shell_awk_1.jpg)
 2. > -v var=value 赋值一个用户定义变量。
         ---
-        ![awk](image/linux_shell_awk_2.jpg)
+        ![awk](image/linux/linux_shell_awk_2.jpg)
 3. >  内建变量
     >> 1. NF 一条记录的字段的数目
     >> 2. NR 已经读出的记录数，就是行号，从1开始
@@ -91,4 +91,4 @@
    > 初始化和操作和收尾 begin{} {} end{ }
    --- ****
 ---
-   > ![awk](image/linux_shell_awk_3.jpg)
+   > ![awk](image/linux/linux_shell_awk_3.jpg)

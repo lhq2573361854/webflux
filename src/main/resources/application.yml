@@ -1,0 +1,21 @@
+server:
+  port: 80
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver              # mysql驱动包
+    url: jdbc:mysql://47.107.249.42:3306/demo?serverTimezone=GMT%2B8&useSSL=false             # 数据库名称
+    username: root
+    password: root
+  redis:
+    host: 47.107.249.42
+    port: 6379
+  data:
+    mongodb:
+      username: root
+      password: root
+      host: 47.107.249.42
+      port: 27017
+      authenticationDatabase: admin
+      database: webflux
+

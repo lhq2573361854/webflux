@@ -1,14 +1,9 @@
 package com.tianling.webflux;
 
-import cn.hutool.core.io.LineHandler;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import java.util.concurrent.Flow.*;
+import java.util.concurrent.SubmissionPublisher;
+import java.util.stream.Stream;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
 
 /**
  * @author: TianLing
@@ -16,13 +11,13 @@ import java.util.function.Supplier;
  * @DateTime: 2020/7/10 10:25
  */
 public class WebFlux {
+
     public static void main(String[] args) {
+        String[] arr = {"admin","root"};
+        Stream.of(arr).filter(name -> name.equalsIgnoreCase(" 3123")).findAny()
+                .ifPresent(name -> System.out.println(name));
 
     }
-}
-@Data
-@ToString
-@NoArgsConstructor
-class Person{
-    String name="xiaoming";
+
+
 }
