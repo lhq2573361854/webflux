@@ -1,7 +1,9 @@
 package com.tianling.webflux.entities;
 
 import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,6 +17,8 @@ import javax.validation.constraints.NotBlank;
  */
 @Data
 @Document(collection = "user")
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @Id
     private String id;

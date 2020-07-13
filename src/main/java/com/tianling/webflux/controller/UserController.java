@@ -2,6 +2,7 @@ package com.tianling.webflux.controller;
 
 import com.tianling.webflux.entities.User;
 import com.tianling.webflux.repositorys.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
