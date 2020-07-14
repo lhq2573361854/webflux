@@ -95,8 +95,28 @@ log-error 记录错误信息
                                    3 多表中 使用经常的建立索引 小表驱动大表
                 IN适合于外表大而内表小的情况；EXISTS适合于外表小而内表大的情况。https://www.cnblogs.com/clarke157/p/7912871.html
                 https://www.cnblogs.com/lyjun/p/11371851.html#%E6%A6%82%E8%BF%B0
+                翻译过来就是
+                提取表是用在 from 语句中的。             
+                子查询是用在 where语句中的，但是也可以用在从一张表中查询，然后插入到另一张表，就像上面展示的那个例子一样
+               
+                我们先讨论IN和EXISTS。
+                in 在里面需要遍历 而存在不需要遍历只需要查找
+                select * from t1 where exists ( select null from t2 where y = x )
+                可以理解为：
+                for x in ( select * from t1 )
+                loop
+                  if ( exists ( select null from t2 where y = x.x )
+                  then
+                     OUTPUT THE RECORD!
+                  end if
+                end loop 
                 
                 
+                select * from t1 where x in ( select y from t2 )
+                事实上可以理解为：
+                select *
+                    from t1, ( select distinct y from t2 ) t2
+                where t1.x = t2.y;
                 
                 
                 
